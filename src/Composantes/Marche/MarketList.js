@@ -3,12 +3,17 @@ import MarketItem from './MarketListItem';
 
 function MarketList({produit}){
     return(
-        <ul>
+        <div className="listeContenu">
             {produit.map((item,index)=>(
-                <MarketItem key={index}
-                nom={item} />
+                <MarketItem 
+                key={index}
+                nom={item.nom}
+                prix={item.prix}
+                image={item.image}
+                />
             ))}
-        </ul>
+       </div>
+        
     );
 }
 export default MarketList;
